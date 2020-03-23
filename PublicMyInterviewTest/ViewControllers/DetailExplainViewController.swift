@@ -15,8 +15,7 @@ import UIKit
 import WebKit
 
 class DetailExplainViewController: UIViewController {
-    
-    
+    var urlString = "" 
     var wkWebView: WKWebView = {
         let wkWebView = WKWebView()
         wkWebView.translatesAutoresizingMaskIntoConstraints = false
@@ -33,7 +32,8 @@ class DetailExplainViewController: UIViewController {
     
     func loadUrl() {
         setWKWebView()
-        guard let url = URL(string: "https://jinshine.github.io/2018/05/22/Swift/5.OOP%20in%20Swift/") else { return }
+        guard !urlString.isEmpty else { return }
+        guard let url = URL(string: "\(urlString)") else { return }
         let requeset = URLRequest(url: url)
         wkWebView.load(requeset)
     }
