@@ -63,6 +63,7 @@ class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource  {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row + 1)
         self.delegate?.dropDownPressed(string: dropDownOptions[indexPath.row])
         self.tableView.deselectRow(at: indexPath, animated: true)
     }

@@ -8,12 +8,14 @@
 
 import Foundation
 import UIKit
-
+protocol DropDownButtonDelegate {
+    func dropdownButtonIsSelected(_ isSelected: Bool)
+}
 class DropDownButton: UIButton, DropDownViewDelegate {
     var dropView = DropDownView()
-    
+    var delegate: DropDownButtonDelegate?
     var height = NSLayoutConstraint()
-    
+    var isOpen = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,12 +40,12 @@ class DropDownButton: UIButton, DropDownViewDelegate {
         height = dropView.heightAnchor.constraint(equalToConstant: 0)
     }
     
-    var isOpen = false
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+       
         if isOpen == false {
             
             isOpen = true
-            
+            self.isSelected = isOpen
             NSLayoutConstraint.deactivate([self.height])
             
             if self.dropView.tableView.contentSize.height > 150 {
@@ -61,7 +63,7 @@ class DropDownButton: UIButton, DropDownViewDelegate {
             
         } else {
             isOpen = false
-            
+            self.isSelected = isOpen
             NSLayoutConstraint.deactivate([self.height])
             self.height.constant = 0
             NSLayoutConstraint.activate([self.height])
@@ -71,7 +73,9 @@ class DropDownButton: UIButton, DropDownViewDelegate {
             }, completion: nil)
             
         }
+        self.delegate?.dropdownButtonIsSelected(self.isSelected)
     }
+    
     
     func dismissDropDown() {
         isOpen = false
@@ -87,6 +91,7 @@ class DropDownButton: UIButton, DropDownViewDelegate {
     //MARK:- DropDownView Delegate 
     func dropDownPressed(string: String) {
         self.setTitle(string, for: .normal)
+        self.delegate?.dropdownButtonIsSelected(false)
         self.dismissDropDown()
     }
 }

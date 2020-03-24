@@ -15,30 +15,32 @@ import UIKit
 import WebKit
 
 class DetailExplainViewController: UIViewController {
-    var urlString = "" 
-    var wkWebView: WKWebView = {
+    public var urlString = ""
+    public var wkWebView: WKWebView = {
         let wkWebView = WKWebView()
         wkWebView.translatesAutoresizingMaskIntoConstraints = false
         return wkWebView
     }()
     
-    func setWKWebView() {
+    public func setWKWebView() {
         view.addSubview(wkWebView)
+       
         wkWebView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         wkWebView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         wkWebView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         wkWebView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     }
     
-    func loadUrl() {
+    public func loadUrl() {
         setWKWebView()
         guard !urlString.isEmpty else { return }
         guard let url = URL(string: "\(urlString)") else { return }
         let requeset = URLRequest(url: url)
         wkWebView.load(requeset)
     }
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
+         navigationController?.isNavigationBarHidden = false
         loadUrl()
     }
 }
