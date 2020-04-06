@@ -3,15 +3,43 @@
 //  PublicMyInterviewTest
 //
 //  Created by ByungHoon Ann on 2020/03/07.
-//  Copyright © 2020 ByungHoon Ann. All rights reserved.
+//  Copyright © 2020 ByungHoon Ann. All rights reserved./*
+
 //
 
-//MARK: - frame과 bounts의 차이,쓰레드,쓰로우
 import UIKit
-public class MainInterviewViewController: UIViewController, DropDownButtonDelegate {
+final public class MainInterviewViewController: UIViewController, DropDownButtonDelegate {
+    var testText = [
+        ExpendControl(isExpend: false, texts: ["객체지향 프로그래밍(OOP)","Git ignore"]),
+        ExpendControl(isExpend: false, texts: ["frame, bounds (1)","frame, bounds (2)"]),
+        ExpendControl(isExpend: false, texts: ["Podfile.lock","Thread란?","Singleton Patter이란?"]),
+        ExpendControl(isExpend: false, texts: ["func에서 사용하는 inout 파라미터란?","Generic이란?"]),
+        ExpendControl(isExpend: false, texts: ["REST?/REST API?","프로비저닝/Provisioning"])
+    ]
     
+     public var testTexts = ["객체지향 프로그래밍(OOP)","Git ignore", "frame, bounds (1)","frame, bounds (2)","Podfile.lock","Thread란?","Singleton Patter이란?","func에서 사용하는 inout 파라미터란?","Generic이란?","REST?/REST API?","프로비저닝/Provisioning"]
     
-    public let testTexts = ["객체지향 프로그래밍(OOP)","Git ignore", "frame, bounds (1)","frame, bounds (2)","Podfile.lock","6","7","8","9","10"]
+    public var testTests02 = ["개발자 면접 예상 질문 01","개발자 면접 예상 질문 02","개발자 면접 예상 질문 03"]
+    public var filterData = [String]()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    public var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.barTintColor = .gray
+        searchBar.searchTextField.tintColor = .black
+        searchBar.searchTextField.backgroundColor = .white
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        return searchBar
+    }()
+    
+    public var button: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .darkGray
+        button.setTitle("작성", for: .normal)
+        button.tintColor = .white
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
     
     public var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -30,22 +58,19 @@ public class MainInterviewViewController: UIViewController, DropDownButtonDelega
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(leftTopButton)
-        leftTopButton.delegate = self
-        leftTopButton.translatesAutoresizingMaskIntoConstraints = false
-        leftTopButton.setTitle("Contents", for: .normal)
-        leftTopButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        leftTopButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        leftTopButton.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        leftTopButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        
+     
+        filterData = testTexts
+        dropDownButtonSet()
+        rightButtonSetUp()
         setUpMainScrollView()
         tableViewSizeSetup()
+        searchBarSetUp()
     }
     
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+        tableView.reloadData()
     }
     
     public func dropdownButtonIsSelected(_ isSelected: Bool) {
@@ -54,6 +79,24 @@ public class MainInterviewViewController: UIViewController, DropDownButtonDelega
         }else{
             scrollView.isUserInteractionEnabled = true
         }
+        
+//        if !appDelegate.dropDownText.isEmpty {
+//            testTexts = testTests02
+//            tableView.reloadData()
+//        }
+        
+    }
+    
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //tableView.reloadData()
+    }
+    
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        guard let searchText = searchBar.searchTextField.text else { return }
+//        filterData = searchText.isEmpty ? testTexts : testTexts.filter {  item in
+//            return item.range(of: searchText,options: .caseInsensitive,range: nil,locale: nil) != nil
+//        }
+//        tableView.reloadData()
     }
 }
 

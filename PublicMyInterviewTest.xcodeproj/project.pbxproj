@@ -16,16 +16,25 @@
 		F617150A2413AB38008266A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F61715082413AB38008266A1 /* LaunchScreen.storyboard */; };
 		F61715122413AE56008266A1 /* MainInterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61715112413AE56008266A1 /* MainInterviewViewController.swift */; };
 		F61715142413B080008266A1 /* MainInterviewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F61715132413B080008266A1 /* MainInterviewTableCell.xib */; };
+		F6541EB624333BFD006C055C /* AttachURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6541EB524333BFD006C055C /* AttachURLView.swift */; };
+		F6541EFB24376592006C055C /* ExpendControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6541EFA24376592006C055C /* ExpendControl.swift */; };
+		F6541F672438D4E0006C055C /* NewWriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6541F662438D4E0006C055C /* NewWriteCollectionViewCell.xib */; };
+		F6541F692438D50B006C055C /* NewWriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6541F682438D50B006C055C /* NewWriteCollectionViewCell.swift */; };
+		F6541F6C243B1BF1006C055C /* centerOptionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6541F6B243B1BF1006C055C /* centerOptionButtonView.swift */; };
+		F68C14EF242F63ED00C2E05D /* NewWriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68C14EE242F63ED00C2E05D /* NewWriteTableViewCell.xib */; };
+		F68C14F1242F64DF00C2E05D /* WriteTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C14F0242F64DF00C2E05D /* WriteTextView.swift */; };
 		F6B32641241A216D001668FA /* DetailExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B32640241A216D001668FA /* DetailExplainViewController.swift */; };
+		F6BF5F0C242E084C00819424 /* NewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BF5F0B242E084C00819424 /* NewWriteViewController.swift */; };
+		F6BF5F0E242F5C7600819424 /* NewWriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BF5F0D242F5C7600819424 /* NewWriteTableViewCell.swift */; };
+		F6BF5F10242F5CCB00819424 /* ExtensionNewWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BF5F0F242F5CCB00819424 /* ExtensionNewWriteViewController.swift */; };
 		F6C5351A241D112E00820A97 /* MainInterviewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C53519241D112E00820A97 /* MainInterviewTableCell.swift */; };
-		F6C5351D241D124A00820A97 /* WebkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5351C241D124A00820A97 /* WebkitViewController.swift */; };
 		F6C5354324263B8400820A97 /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C5354224263B8400820A97 /* DropDownButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F60B2A4B2428B40500AC0037 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		F60B2A4E242A14A900AC0037 /* ExtensionMainInterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionMainInterViewController.swift; sourceTree = "<group>"; };
-		F61714FA2413AB35008266A1 /* PublicMyInterviewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PublicMyInterviewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61714FA2413AB35008266A1 /* WIKIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WIKIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61714FD2413AB35008266A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F61714FF2413AB35008266A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F61715042413AB35008266A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,9 +43,18 @@
 		F617150B2413AB38008266A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F61715112413AE56008266A1 /* MainInterviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainInterviewViewController.swift; path = ../MainInterviewViewController.swift; sourceTree = "<group>"; };
 		F61715132413B080008266A1 /* MainInterviewTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainInterviewTableCell.xib; sourceTree = "<group>"; };
+		F6541EB524333BFD006C055C /* AttachURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachURLView.swift; sourceTree = "<group>"; };
+		F6541EFA24376592006C055C /* ExpendControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpendControl.swift; sourceTree = "<group>"; };
+		F6541F662438D4E0006C055C /* NewWriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewWriteCollectionViewCell.xib; sourceTree = "<group>"; };
+		F6541F682438D50B006C055C /* NewWriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		F6541F6B243B1BF1006C055C /* centerOptionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = centerOptionButtonView.swift; sourceTree = "<group>"; };
+		F68C14EE242F63ED00C2E05D /* NewWriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewWriteTableViewCell.xib; sourceTree = "<group>"; };
+		F68C14F0242F64DF00C2E05D /* WriteTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteTextView.swift; sourceTree = "<group>"; };
 		F6B32640241A216D001668FA /* DetailExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExplainViewController.swift; sourceTree = "<group>"; };
+		F6BF5F0B242E084C00819424 /* NewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWriteViewController.swift; sourceTree = "<group>"; };
+		F6BF5F0D242F5C7600819424 /* NewWriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWriteTableViewCell.swift; sourceTree = "<group>"; };
+		F6BF5F0F242F5CCB00819424 /* ExtensionNewWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNewWriteViewController.swift; sourceTree = "<group>"; };
 		F6C53519241D112E00820A97 /* MainInterviewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterviewTableCell.swift; sourceTree = "<group>"; };
-		F6C5351C241D124A00820A97 /* WebkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebkitViewController.swift; sourceTree = "<group>"; };
 		F6C5354224263B8400820A97 /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,6 +81,9 @@
 			children = (
 				F6C5354224263B8400820A97 /* DropDownButton.swift */,
 				F60B2A4B2428B40500AC0037 /* DropDownView.swift */,
+				F68C14F0242F64DF00C2E05D /* WriteTextView.swift */,
+				F6541EB524333BFD006C055C /* AttachURLView.swift */,
+				F6541F6B243B1BF1006C055C /* centerOptionButtonView.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";
@@ -71,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				F60B2A4E242A14A900AC0037 /* ExtensionMainInterViewController.swift */,
+				F6BF5F0F242F5CCB00819424 /* ExtensionNewWriteViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -87,7 +109,7 @@
 		F61714FB2413AB35008266A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F61714FA2413AB35008266A1 /* PublicMyInterviewTest.app */,
+				F61714FA2413AB35008266A1 /* WIKIOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,11 +119,13 @@
 			children = (
 				F61714FD2413AB35008266A1 /* AppDelegate.swift */,
 				F61714FF2413AB35008266A1 /* SceneDelegate.swift */,
+				F6541F6A243B1774006C055C /* Services */,
+				F6541EF9243762FE006C055C /* Modals */,
 				F60B2A4D242A148700AC0037 /* Extensions */,
 				F60B2A4A2428B3EF00AC0037 /* CustomUI */,
 				F6C5351B241D122E00820A97 /* ViewControllers */,
 				F6C53518241D110A00820A97 /* Cells */,
-				F6C53517241D10FE00820A97 /* NibFile */,
+				F6C53517241D10FE00820A97 /* NibFiles */,
 				F61715032413AB35008266A1 /* Main.storyboard */,
 				F61715062413AB38008266A1 /* Assets.xcassets */,
 				F61715082413AB38008266A1 /* LaunchScreen.storyboard */,
@@ -110,18 +134,37 @@
 			path = PublicMyInterviewTest;
 			sourceTree = "<group>";
 		};
-		F6C53517241D10FE00820A97 /* NibFile */ = {
+		F6541EF9243762FE006C055C /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				F6541EFA24376592006C055C /* ExpendControl.swift */,
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
+		F6541F6A243B1774006C055C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F6C53517241D10FE00820A97 /* NibFiles */ = {
 			isa = PBXGroup;
 			children = (
 				F61715132413B080008266A1 /* MainInterviewTableCell.xib */,
+				F68C14EE242F63ED00C2E05D /* NewWriteTableViewCell.xib */,
+				F6541F662438D4E0006C055C /* NewWriteCollectionViewCell.xib */,
 			);
-			path = NibFile;
+			path = NibFiles;
 			sourceTree = "<group>";
 		};
 		F6C53518241D110A00820A97 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				F6C53519241D112E00820A97 /* MainInterviewTableCell.swift */,
+				F6BF5F0D242F5C7600819424 /* NewWriteTableViewCell.swift */,
+				F6541F682438D50B006C055C /* NewWriteCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -131,7 +174,7 @@
 			children = (
 				F61715112413AE56008266A1 /* MainInterviewViewController.swift */,
 				F6B32640241A216D001668FA /* DetailExplainViewController.swift */,
-				F6C5351C241D124A00820A97 /* WebkitViewController.swift */,
+				F6BF5F0B242E084C00819424 /* NewWriteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -153,7 +196,7 @@
 			);
 			name = PublicMyInterviewTest;
 			productName = PublicMyInterviewTest;
-			productReference = F61714FA2413AB35008266A1 /* PublicMyInterviewTest.app */;
+			productReference = F61714FA2413AB35008266A1 /* WIKIOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,8 +239,10 @@
 			files = (
 				F617150A2413AB38008266A1 /* LaunchScreen.storyboard in Resources */,
 				F61715142413B080008266A1 /* MainInterviewTableCell.xib in Resources */,
+				F68C14EF242F63ED00C2E05D /* NewWriteTableViewCell.xib in Resources */,
 				F61715072413AB38008266A1 /* Assets.xcassets in Resources */,
 				F61715052413AB35008266A1 /* Main.storyboard in Resources */,
+				F6541F672438D4E0006C055C /* NewWriteCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,14 +254,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F61714FE2413AB35008266A1 /* AppDelegate.swift in Sources */,
+				F6541EB624333BFD006C055C /* AttachURLView.swift in Sources */,
+				F68C14F1242F64DF00C2E05D /* WriteTextView.swift in Sources */,
 				F6C5354324263B8400820A97 /* DropDownButton.swift in Sources */,
 				F6C5351A241D112E00820A97 /* MainInterviewTableCell.swift in Sources */,
+				F6BF5F0E242F5C7600819424 /* NewWriteTableViewCell.swift in Sources */,
+				F6541F692438D50B006C055C /* NewWriteCollectionViewCell.swift in Sources */,
 				F60B2A4F242A14A900AC0037 /* ExtensionMainInterViewController.swift in Sources */,
-				F6C5351D241D124A00820A97 /* WebkitViewController.swift in Sources */,
+				F6541F6C243B1BF1006C055C /* centerOptionButtonView.swift in Sources */,
 				F6B32641241A216D001668FA /* DetailExplainViewController.swift in Sources */,
+				F6BF5F0C242E084C00819424 /* NewWriteViewController.swift in Sources */,
+				F6BF5F10242F5CCB00819424 /* ExtensionNewWriteViewController.swift in Sources */,
 				F60B2A4C2428B40500AC0037 /* DropDownView.swift in Sources */,
 				F61715122413AE56008266A1 /* MainInterviewViewController.swift in Sources */,
 				F61715002413AB35008266A1 /* SceneDelegate.swift in Sources */,
+				F6541EFB24376592006C055C /* ExpendControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +420,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kjsx.PublicMyInterviewTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WIKIOS;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -386,7 +438,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kjsx.PublicMyInterviewTest;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = WIKIOS;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

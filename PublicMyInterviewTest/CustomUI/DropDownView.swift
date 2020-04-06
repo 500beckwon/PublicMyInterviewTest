@@ -15,7 +15,7 @@ protocol DropDownViewDelegate {
 
 class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource  {
     
-    var dropDownOptions = ["1","2","3"]
+    var dropDownOptions = ["개발 분야","인적 분야","면접","회사 정보"]
     
     var tableView = UITableView()
     
@@ -38,7 +38,6 @@ class DropDownView: UIView, UITableViewDelegate, UITableViewDataSource  {
         tableView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
         tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        
     }
     
     required init?(coder aDecoder: NSCoder) {

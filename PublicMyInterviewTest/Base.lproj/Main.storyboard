@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AF3-cW-Oqh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AF3-cW-Oqh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,18 +10,18 @@
         <!--Main Interview View Controller-->
         <scene sceneID="5l3-HX-dLs">
             <objects>
-                <viewController id="EkX-RE-bNu" customClass="MainInterviewViewController" customModule="PublicMyInterviewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainInterviewViewController" id="EkX-RE-bNu" customClass="MainInterviewViewController" customModule="WIKIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rzt-5S-9x9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dC8-3D-hh0"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cvj-vw-pfy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K1I-fs-ZhX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880" y="-174"/>
+            <point key="canvasLocation" x="879.71014492753625" y="-174.10714285714286"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oXM-zQ-AZL">
@@ -42,7 +42,7 @@
         <!--Detail Explain View Controller-->
         <scene sceneID="FOn-Be-6jc">
             <objects>
-                <viewController storyboardIdentifier="DetailExplainViewController" id="OtE-h7-vWD" customClass="DetailExplainViewController" customModule="PublicMyInterviewTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailExplainViewController" id="OtE-h7-vWD" customClass="DetailExplainViewController" customModule="WIKIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zx1-4o-u8O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,6 +53,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h4e-a3-l68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1926" y="-174"/>
+        </scene>
+        <!--New Write View Controller-->
+        <scene sceneID="VOQ-iv-ysn">
+            <objects>
+                <viewController storyboardIdentifier="NewWriteViewController" id="ZZb-dr-nhp" customClass="NewWriteViewController" customModule="WIKIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="18h-5p-bDz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8rl-bi-T1D"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vkN-ho-NqS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S99-3T-UhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2703" y="-174"/>
         </scene>
     </scenes>
 </document>

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F61714F92413AB35008266A1"
-               BuildableName = "PublicMyInterviewTest.app"
+               BuildableName = "WIKIOS.app"
                BlueprintName = "PublicMyInterviewTest"
                ReferencedContainer = "container:PublicMyInterviewTest.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F61714F92413AB35008266A1"
-            BuildableName = "PublicMyInterviewTest.app"
+            BuildableName = "WIKIOS.app"
             BlueprintName = "PublicMyInterviewTest"
             ReferencedContainer = "container:PublicMyInterviewTest.xcodeproj">
          </BuildableReference>
@@ -69,7 +69,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F61714F92413AB35008266A1"
-            BuildableName = "PublicMyInterviewTest.app"
+            BuildableName = "WIKIOS.app"
             BlueprintName = "PublicMyInterviewTest"
             ReferencedContainer = "container:PublicMyInterviewTest.xcodeproj">
          </BuildableReference>

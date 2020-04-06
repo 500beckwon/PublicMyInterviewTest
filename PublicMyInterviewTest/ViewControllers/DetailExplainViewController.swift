@@ -14,7 +14,7 @@ import Foundation
 import UIKit
 import WebKit
 
-class DetailExplainViewController: UIViewController {
+final class DetailExplainViewController: UIViewController {
     public var urlString = ""
     public var wkWebView: WKWebView = {
         let wkWebView = WKWebView()
@@ -24,7 +24,6 @@ class DetailExplainViewController: UIViewController {
     
     public func setWKWebView() {
         view.addSubview(wkWebView)
-       
         wkWebView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         wkWebView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         wkWebView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -38,9 +37,11 @@ class DetailExplainViewController: UIViewController {
         let requeset = URLRequest(url: url)
         wkWebView.load(requeset)
     }
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
-         navigationController?.isNavigationBarHidden = false
+        print("viewDidLoad")
+        navigationController?.isNavigationBarHidden = false
         loadUrl()
     }
 }

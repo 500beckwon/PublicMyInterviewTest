@@ -6,21 +6,22 @@
 //  Copyright © 2020 ByungHoon Ann. All rights reserved.
 //
 
-import Foundation
 import UIKit
 protocol DropDownButtonDelegate {
     func dropdownButtonIsSelected(_ isSelected: Bool)
 }
+
 class DropDownButton: UIButton, DropDownViewDelegate {
     var dropView = DropDownView()
     var delegate: DropDownButtonDelegate?
     var height = NSLayoutConstraint()
     var isOpen = false
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.darkGray
+        self.backgroundColor = .darkGray
         
         dropView = DropDownView.init(frame: CGRect.init(x: 0, y: 0, width: 0, height: 0))
         dropView.delegate = self
@@ -41,15 +42,14 @@ class DropDownButton: UIButton, DropDownViewDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       
         if isOpen == false {
             
             isOpen = true
             self.isSelected = isOpen
             NSLayoutConstraint.deactivate([self.height])
             
-            if self.dropView.tableView.contentSize.height > 150 {
-                self.height.constant = 150
+            if self.dropView.tableView.contentSize.height > 180 {
+                self.height.constant = 180
             } else {
                 self.height.constant = self.dropView.tableView.contentSize.height
             }
@@ -91,6 +91,7 @@ class DropDownButton: UIButton, DropDownViewDelegate {
     //MARK:- DropDownView Delegate 
     func dropDownPressed(string: String) {
         self.setTitle(string, for: .normal)
+        appDelegate.dropDownText = string
         self.delegate?.dropdownButtonIsSelected(false)
         self.dismissDropDown()
     }
