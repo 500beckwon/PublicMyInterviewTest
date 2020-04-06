@@ -14,13 +14,13 @@
 		F61715052413AB35008266A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F61715032413AB35008266A1 /* Main.storyboard */; };
 		F61715072413AB38008266A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F61715062413AB38008266A1 /* Assets.xcassets */; };
 		F617150A2413AB38008266A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F61715082413AB38008266A1 /* LaunchScreen.storyboard */; };
-		F61715122413AE56008266A1 /* MainInterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61715112413AE56008266A1 /* MainInterviewViewController.swift */; };
 		F61715142413B080008266A1 /* MainInterviewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F61715132413B080008266A1 /* MainInterviewTableCell.xib */; };
 		F6541EB624333BFD006C055C /* AttachURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6541EB524333BFD006C055C /* AttachURLView.swift */; };
 		F6541EFB24376592006C055C /* ExpendControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6541EFA24376592006C055C /* ExpendControl.swift */; };
 		F6541F672438D4E0006C055C /* NewWriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6541F662438D4E0006C055C /* NewWriteCollectionViewCell.xib */; };
 		F6541F692438D50B006C055C /* NewWriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6541F682438D50B006C055C /* NewWriteCollectionViewCell.swift */; };
 		F6541F6C243B1BF1006C055C /* centerOptionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6541F6B243B1BF1006C055C /* centerOptionButtonView.swift */; };
+		F6541F6E243B2F54006C055C /* MainInterviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6541F6D243B2F53006C055C /* MainInterviewViewController.swift */; };
 		F68C14EF242F63ED00C2E05D /* NewWriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68C14EE242F63ED00C2E05D /* NewWriteTableViewCell.xib */; };
 		F68C14F1242F64DF00C2E05D /* WriteTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C14F0242F64DF00C2E05D /* WriteTextView.swift */; };
 		F6B32641241A216D001668FA /* DetailExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B32640241A216D001668FA /* DetailExplainViewController.swift */; };
@@ -41,13 +41,13 @@
 		F61715062413AB38008266A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F61715092413AB38008266A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F617150B2413AB38008266A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F61715112413AE56008266A1 /* MainInterviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainInterviewViewController.swift; path = ../MainInterviewViewController.swift; sourceTree = "<group>"; };
 		F61715132413B080008266A1 /* MainInterviewTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainInterviewTableCell.xib; sourceTree = "<group>"; };
 		F6541EB524333BFD006C055C /* AttachURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachURLView.swift; sourceTree = "<group>"; };
 		F6541EFA24376592006C055C /* ExpendControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpendControl.swift; sourceTree = "<group>"; };
 		F6541F662438D4E0006C055C /* NewWriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewWriteCollectionViewCell.xib; sourceTree = "<group>"; };
 		F6541F682438D50B006C055C /* NewWriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		F6541F6B243B1BF1006C055C /* centerOptionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = centerOptionButtonView.swift; sourceTree = "<group>"; };
+		F6541F6D243B2F53006C055C /* MainInterviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainInterviewViewController.swift; path = PublicMyInterviewTest/ViewControllers/MainInterviewViewController.swift; sourceTree = SOURCE_ROOT; };
 		F68C14EE242F63ED00C2E05D /* NewWriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewWriteTableViewCell.xib; sourceTree = "<group>"; };
 		F68C14F0242F64DF00C2E05D /* WriteTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteTextView.swift; sourceTree = "<group>"; };
 		F6B32640241A216D001668FA /* DetailExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailExplainViewController.swift; sourceTree = "<group>"; };
@@ -172,7 +172,7 @@
 		F6C5351B241D122E00820A97 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F61715112413AE56008266A1 /* MainInterviewViewController.swift */,
+				F6541F6D243B2F53006C055C /* MainInterviewViewController.swift */,
 				F6B32640241A216D001668FA /* DetailExplainViewController.swift */,
 				F6BF5F0B242E084C00819424 /* NewWriteViewController.swift */,
 			);
@@ -266,7 +266,7 @@
 				F6BF5F0C242E084C00819424 /* NewWriteViewController.swift in Sources */,
 				F6BF5F10242F5CCB00819424 /* ExtensionNewWriteViewController.swift in Sources */,
 				F60B2A4C2428B40500AC0037 /* DropDownView.swift in Sources */,
-				F61715122413AE56008266A1 /* MainInterviewViewController.swift in Sources */,
+				F6541F6E243B2F54006C055C /* MainInterviewViewController.swift in Sources */,
 				F61715002413AB35008266A1 /* SceneDelegate.swift in Sources */,
 				F6541EFB24376592006C055C /* ExpendControl.swift in Sources */,
 			);

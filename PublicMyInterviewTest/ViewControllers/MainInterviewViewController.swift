@@ -3,21 +3,42 @@
 //  PublicMyInterviewTest
 //
 //  Created by ByungHoon Ann on 2020/03/07.
-//  Copyright © 2020 ByungHoon Ann. All rights reserved.
+//  Copyright © 2020 ByungHoon Ann. All rights reserved./*
+
 //
 
-//MARK: - frame과 bounts의 차이,쓰레드,쓰로우
- 
-import Foundation
 import UIKit
-
-public class MainInterviewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
+final public class MainInterviewViewController: UIViewController, DropDownButtonDelegate {
+    var testText = [
+        ExpendControl(isExpend: false, texts: ["객체지향 프로그래밍(OOP)","Git ignore"]),
+        ExpendControl(isExpend: false, texts: ["frame, bounds (1)","frame, bounds (2)"]),
+        ExpendControl(isExpend: false, texts: ["Podfile.lock","Thread란?","Singleton Patter이란?"]),
+        ExpendControl(isExpend: false, texts: ["func에서 사용하는 inout 파라미터란?","Generic이란?"]),
+        ExpendControl(isExpend: false, texts: ["REST?/REST API?","프로비저닝/Provisioning"])
+    ]
     
-    public let testTexts = ["Podfile.lock","Git ignore","고차 함수","재귀 함수","객체지향 프로그래밍(OOP)","6","7","8","9","10"]
+     public var testTexts = ["객체지향 프로그래밍(OOP)","Git ignore", "frame, bounds (1)","frame, bounds (2)","Podfile.lock","Thread란?","Singleton Patter이란?","func에서 사용하는 inout 파라미터란?","Generic이란?","REST?/REST API?","프로비저닝/Provisioning"]
     
-    public var label: UILabel = {
-        let label = UILabel()
-        return label
+    public var testTests02 = ["개발자 면접 예상 질문 01","개발자 면접 예상 질문 02","개발자 면접 예상 질문 03"]
+    public var filterData = [String]()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    public var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.barTintColor = .gray
+        searchBar.searchTextField.tintColor = .black
+        searchBar.searchTextField.backgroundColor = .white
+        searchBar.translatesAutoresizingMaskIntoConstraints = false
+        return searchBar
+    }()
+    
+    public var button: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .darkGray
+        button.setTitle("작성", for: .normal)
+        button.tintColor = .white
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     public var scrollView: UIScrollView = {
@@ -27,84 +48,57 @@ public class MainInterviewViewController: UIViewController, UITableViewDelegate,
         return scrollView
     }()
     
-    public func setUpMainScrollView() {
-        view.addSubview(scrollView)
-        scrollView.delegate = self
-        scrollView.isPagingEnabled = true
-        scrollView.isScrollEnabled = true
-        let scrollEdgeInset = UIEdgeInsets(top: 0, left: 30, bottom: 10, right: 30)
-        scrollView.horizontalScrollIndicatorInsets = scrollEdgeInset
-        scrollView.heightAnchor.constraint(equalToConstant: view.frame.height/2.5).isActive = true
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-       
-        for i in 0...3 {
-            let label = UILabel()
-            label.font = .boldSystemFont(ofSize: 50)
-            label.textColor = .black
-            label.textAlignment = .center
-            label.text = "\(i + 1)"
-            let xPosition = view.frame.width * CGFloat(1 * i)
-            label.frame = CGRect(x: xPosition, y: 0, width: view.frame.width, height: view.frame.height/2.5)
-            scrollView.contentSize.width = view.frame.width * CGFloat(i+1)
-            scrollView.addSubview(label)
-        }
-    }
-    
-    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
-    }
-    
-    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        print("pointee" ,targetContentOffset.pointee)
-    }
-    
     public var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
     
+    var leftTopButton = DropDownButton()
+    
     override public func viewDidLoad() {
         super.viewDidLoad()
+     
+        filterData = testTexts
+        dropDownButtonSet()
+        rightButtonSetUp()
         setUpMainScrollView()
         tableViewSizeSetup()
+        searchBarSetUp()
     }
     
-    public func mainTitleViewSetup() {
+    override public func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+        tableView.reloadData()
+    }
+    
+    public func dropdownButtonIsSelected(_ isSelected: Bool) {
+        if isSelected == true  {
+            scrollView.isUserInteractionEnabled = false
+        }else{
+            scrollView.isUserInteractionEnabled = true
+        }
+        
+//        if !appDelegate.dropDownText.isEmpty {
+//            testTexts = testTests02
+//            tableView.reloadData()
+//        }
         
     }
     
-    public func tableViewSizeSetup() {
-        
-        tableView.dataSource = self
-        tableView.delegate = self
-        let nibName = UINib(nibName: "MainInterviewTableCell", bundle: nil)
-        tableView.register(nibName, forCellReuseIdentifier: "MainInterviewTableCell")
-        
-        view.addSubview(tableView)
-        tableView.topAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //tableView.reloadData()
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testTexts.count
-    }
-    
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MainInterviewTableCell") as? MainInterviewTableCell else { return UITableViewCell() }
-
-        cell.textLabel?.text = testTexts[indexPath.row]
-        cell.textLabel?.textColor = .black
-        return cell
-    }
-    
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailExplainViewController") as? DetailExplainViewController else { return }
-        navigationController?.pushViewController(vc, animated: true)
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        guard let searchText = searchBar.searchTextField.text else { return }
+//        filterData = searchText.isEmpty ? testTexts : testTexts.filter {  item in
+//            return item.range(of: searchText,options: .caseInsensitive,range: nil,locale: nil) != nil
+//        }
+//        tableView.reloadData()
     }
 }
+
+
 
